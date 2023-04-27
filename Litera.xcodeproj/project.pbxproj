@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		B684474729F682AB00416A8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474629F682AB00416A8C /* AppDelegate.swift */; };
 		B684474929F682AB00416A8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474829F682AB00416A8C /* SceneDelegate.swift */; };
-		B684474B29F682AB00416A8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474A29F682AB00416A8C /* ViewController.swift */; };
+		B684474B29F682AB00416A8C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474A29F682AB00416A8C /* ExploreViewController.swift */; };
 		B684475029F682AE00416A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B684474F29F682AE00416A8C /* Assets.xcassets */; };
 		B684475329F682AE00416A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B684475129F682AE00416A8C /* LaunchScreen.storyboard */; };
+		B6A4877229F8D8FD00406788 /* SwipeTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877129F8D8FD00406788 /* SwipeTipView.swift */; };
+		B6A4877429F94E1600406788 /* BookCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877329F94E1600406788 /* BookCoverView.swift */; };
+		B6A4877629FA08F800406788 /* AssetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877529FA08F800406788 /* AssetUtils.swift */; };
+		B6A8E7E229F7B32E00B73D7F /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8E7E129F7B32E00B73D7F /* BookmarksViewController.swift */; };
+		B6A8E7E429F7B36600B73D7F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8E7E329F7B36600B73D7F /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B684474329F682AB00416A8C /* Litera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Litera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B684474629F682AB00416A8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B684474829F682AB00416A8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B684474A29F682AB00416A8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B684474A29F682AB00416A8C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		B684474F29F682AE00416A8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B684475229F682AE00416A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B684475429F682AE00416A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A4877129F8D8FD00406788 /* SwipeTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTipView.swift; sourceTree = "<group>"; };
+		B6A4877329F94E1600406788 /* BookCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverView.swift; sourceTree = "<group>"; };
+		B6A4877529FA08F800406788 /* AssetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUtils.swift; sourceTree = "<group>"; };
+		B6A8E7E129F7B32E00B73D7F /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		B6A8E7E329F7B36600B73D7F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		B684474529F682AB00416A8C /* Litera */ = {
 			isa = PBXGroup;
 			children = (
+				B6A8E7E029F7B2E800B73D7F /* Models */,
+				B6A8E7DF29F7B2E100B73D7F /* Controllers */,
+				B6A8E7DE29F7B2DA00B73D7F /* Views */,
 				B684474629F682AB00416A8C /* AppDelegate.swift */,
 				B684474829F682AB00416A8C /* SceneDelegate.swift */,
-				B684474A29F682AB00416A8C /* ViewController.swift */,
 				B684474F29F682AE00416A8C /* Assets.xcassets */,
 				B684475129F682AE00416A8C /* LaunchScreen.storyboard */,
 				B684475429F682AE00416A8C /* Info.plist */,
+				B6A4877529FA08F800406788 /* AssetUtils.swift */,
 			);
 			path = Litera;
+			sourceTree = "<group>";
+		};
+		B6A8E7DE29F7B2DA00B73D7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6A4877129F8D8FD00406788 /* SwipeTipView.swift */,
+				B6A4877329F94E1600406788 /* BookCoverView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6A8E7DF29F7B2E100B73D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B684474A29F682AB00416A8C /* ExploreViewController.swift */,
+				B6A8E7E129F7B32E00B73D7F /* BookmarksViewController.swift */,
+				B6A8E7E329F7B36600B73D7F /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6A8E7E029F7B2E800B73D7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B684474B29F682AB00416A8C /* ViewController.swift in Sources */,
+				B6A8E7E229F7B32E00B73D7F /* BookmarksViewController.swift in Sources */,
+				B6A8E7E429F7B36600B73D7F /* FriendsViewController.swift in Sources */,
+				B6A4877629FA08F800406788 /* AssetUtils.swift in Sources */,
+				B6A4877429F94E1600406788 /* BookCoverView.swift in Sources */,
+				B684474B29F682AB00416A8C /* ExploreViewController.swift in Sources */,
+				B6A4877229F8D8FD00406788 /* SwipeTipView.swift in Sources */,
 				B684474729F682AB00416A8C /* AppDelegate.swift in Sources */,
 				B684474929F682AB00416A8C /* SceneDelegate.swift in Sources */,
 			);
@@ -280,8 +324,8 @@
 				INFOPLIST_FILE = Litera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,8 +352,8 @@
 				INFOPLIST_FILE = Litera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

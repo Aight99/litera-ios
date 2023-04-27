@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-fU-y7o">
-                                <rect key="frame" x="175.66666666666666" y="416.66666666666669" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Litera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-fU-y7o">
+                                <rect key="frame" x="155.66666666666666" y="407" width="82" height="39.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.88235294117647056" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AWq-fU-y7o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mPf-h0-F1s"/>
                             <constraint firstItem="AWq-fU-y7o" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-12" id="rxv-Rh-vFH"/>

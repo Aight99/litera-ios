@@ -11,7 +11,6 @@ class FriendsViewController: UIViewController {
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
-//        self.title = "Friends"
         self.tabBarItem.image = UIImage(named: IconName.friends)
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B632093A2A00B83A008B8DAC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63209392A00B83A008B8DAC /* BookView.swift */; };
 		B684474729F682AB00416A8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474629F682AB00416A8C /* AppDelegate.swift */; };
 		B684474929F682AB00416A8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474829F682AB00416A8C /* SceneDelegate.swift */; };
 		B684474B29F682AB00416A8C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B684474A29F682AB00416A8C /* ExploreViewController.swift */; };
@@ -15,11 +16,15 @@
 		B6A4877229F8D8FD00406788 /* SwipeTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877129F8D8FD00406788 /* SwipeTipView.swift */; };
 		B6A4877429F94E1600406788 /* BookCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877329F94E1600406788 /* BookCoverView.swift */; };
 		B6A4877629FA08F800406788 /* AssetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877529FA08F800406788 /* AssetUtils.swift */; };
+		B6A4877929FA460500406788 /* BookDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877829FA460500406788 /* BookDescriptionView.swift */; };
+		B6A4877B29FCAB1500406788 /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877A29FCAB1500406788 /* TagCollectionView.swift */; };
+		B6A4877D29FCC0F700406788 /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4877C29FCC0F700406788 /* TagViewCell.swift */; };
 		B6A8E7E229F7B32E00B73D7F /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8E7E129F7B32E00B73D7F /* BookmarksViewController.swift */; };
 		B6A8E7E429F7B36600B73D7F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8E7E329F7B36600B73D7F /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B63209392A00B83A008B8DAC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		B684474329F682AB00416A8C /* Litera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Litera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B684474629F682AB00416A8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B684474829F682AB00416A8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,9 @@
 		B6A4877129F8D8FD00406788 /* SwipeTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTipView.swift; sourceTree = "<group>"; };
 		B6A4877329F94E1600406788 /* BookCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverView.swift; sourceTree = "<group>"; };
 		B6A4877529FA08F800406788 /* AssetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUtils.swift; sourceTree = "<group>"; };
+		B6A4877829FA460500406788 /* BookDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDescriptionView.swift; sourceTree = "<group>"; };
+		B6A4877A29FCAB1500406788 /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
+		B6A4877C29FCC0F700406788 /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
 		B6A8E7E129F7B32E00B73D7F /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B6A8E7E329F7B36600B73D7F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,11 +85,23 @@
 			path = Litera;
 			sourceTree = "<group>";
 		};
+		B6A4877729FA45AB00406788 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				B6A4877329F94E1600406788 /* BookCoverView.swift */,
+				B6A4877829FA460500406788 /* BookDescriptionView.swift */,
+				B6A4877129F8D8FD00406788 /* SwipeTipView.swift */,
+				B6A4877A29FCAB1500406788 /* TagCollectionView.swift */,
+				B6A4877C29FCC0F700406788 /* TagViewCell.swift */,
+				B63209392A00B83A008B8DAC /* BookView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		B6A8E7DE29F7B2DA00B73D7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B6A4877129F8D8FD00406788 /* SwipeTipView.swift */,
-				B6A4877329F94E1600406788 /* BookCoverView.swift */,
+				B6A4877729FA45AB00406788 /* Explore */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,11 +196,15 @@
 				B6A8E7E229F7B32E00B73D7F /* BookmarksViewController.swift in Sources */,
 				B6A8E7E429F7B36600B73D7F /* FriendsViewController.swift in Sources */,
 				B6A4877629FA08F800406788 /* AssetUtils.swift in Sources */,
+				B632093A2A00B83A008B8DAC /* BookView.swift in Sources */,
 				B6A4877429F94E1600406788 /* BookCoverView.swift in Sources */,
 				B684474B29F682AB00416A8C /* ExploreViewController.swift in Sources */,
 				B6A4877229F8D8FD00406788 /* SwipeTipView.swift in Sources */,
+				B6A4877929FA460500406788 /* BookDescriptionView.swift in Sources */,
+				B6A4877B29FCAB1500406788 /* TagCollectionView.swift in Sources */,
 				B684474729F682AB00416A8C /* AppDelegate.swift in Sources */,
 				B684474929F682AB00416A8C /* SceneDelegate.swift in Sources */,
+				B6A4877D29FCC0F700406788 /* TagViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

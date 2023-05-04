@@ -1,12 +1,6 @@
 {
   "images" : [
     {
-      "alignment-insets" : {
-        "bottom" : 0,
-        "left" : 0,
-        "right" : 0,
-        "top" : 12
-      },
       "filename" : "Type=arrow left.svg",
       "idiom" : "universal"
     }

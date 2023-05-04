@@ -12,7 +12,7 @@ class SwipeTipView: UIView {
     private lazy var icon: UIImageView = {
         let imageView = UIImageView(image: normalIcon)
         imageView.tintColor = normalColor
-//        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     private lazy var label: UILabel = {
@@ -26,8 +26,9 @@ class SwipeTipView: UIView {
     let normalIcon: UIImage
     let activatedIcon: UIImage
     let normalColor: UIColor = UIColor(named: ColorName.tip)!
+    let isCompact: Bool
+    let text: String
     var activatedColor: UIColor = UIColor(named: ColorName.accent)!
-    var text = ""
     
     private var isTipActive = false
     var isActive: Bool {
@@ -48,29 +49,40 @@ class SwipeTipView: UIView {
         }
     }
 
-    init(normalIcon: UIImage, activatedIcon: UIImage) {
+    init(normalIcon: UIImage, activatedIcon: UIImage, text: String, isCompact: Bool = true) {
         self.normalIcon = normalIcon
         self.activatedIcon = activatedIcon
+        self.text = text
+        self.isCompact = isCompact
         super.init(frame: .zero)
+        addSubview(icon)
+        addSubview(label)
+        setupConstraints()
+        let tapHandler = UITapGestureRecognizer(target: self, action: #selector(activateTip))
+        addGestureRecognizer(tapHandler)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-//        backgroundColor = activatedColor
-        addSubview(icon)
-        addSubview(label)
+    private func setupConstraints() {
         icon.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
+        
+        let labelPadding: CGFloat = isCompact ? 5 : 10
+        
         NSLayoutConstraint.activate([
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            icon.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            icon.bottomAnchor.constraint(equalTo: label.topAnchor, constant: -labelPadding),
             icon.centerXAnchor.constraint(equalTo: centerXAnchor),
             icon.widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
         ])
+    }
+    
+    @objc private func activateTip() {
+        isActive = !isActive
     }
 }

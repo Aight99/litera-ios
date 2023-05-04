@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             BookmarksViewController(),
         ]
         tabBarController.setViewControllers(tabControllers, animated: false)
+        tabBarController.selectedIndex = 1
         UITabBar.appearance().tintColor = .label
         
         self.window = UIWindow(windowScene: windowScene)

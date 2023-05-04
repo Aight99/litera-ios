@@ -11,7 +11,6 @@ class BookmarksViewController: UIViewController {
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
-//        self.title = "Bookmarks"
         self.tabBarItem.image = UIImage(named: IconName.bookmark)
     }
     

@@ -9,19 +9,20 @@ import UIKit
 
 class ExploreViewController: UIViewController {
     
-    private lazy var bookCoverView = {
-        let coverView = BookCoverView(frame: .zero)
-        return coverView
+    private lazy var bookView = {
+        let bookView = BookView()
+        return bookView
     }()
     private lazy var yesTipView = {
         let yesImage = UIImage(systemName: "checkmark")!
         let rightImage = UIImage(named: IconName.arrowRight)!
         let tipView = SwipeTipView(
             normalIcon: rightImage,
-            activatedIcon: yesImage
+            activatedIcon: yesImage,
+            text: "Люблю такое",
+            isCompact: false
         )
         tipView.activatedColor = .systemGreen
-        tipView.text = "Люблю такое"
         return tipView
     }()
     private lazy var noTipView = {
@@ -29,10 +30,11 @@ class ExploreViewController: UIViewController {
         let leftImage = UIImage(named: IconName.arrowLeft)!
         let tipView = SwipeTipView(
             normalIcon: leftImage,
-            activatedIcon: noImage
+            activatedIcon: noImage,
+            text: "Не предлагать",
+            isCompact: false
         )
         tipView.activatedColor = .systemRed
-        tipView.text = "Не предлагать"
         return tipView
     }()
     private lazy var skipTipView = {
@@ -40,9 +42,9 @@ class ExploreViewController: UIViewController {
         let upImage = UIImage(systemName: "chevron.up")!
         let tipView = SwipeTipView(
             normalIcon: upImage,
-            activatedIcon: skipImage
+            activatedIcon: skipImage,
+            text: "Пропустить"
         )
-        tipView.text = "Пропустить"
         return tipView
     }()
     private lazy var saveTipView = {
@@ -50,15 +52,14 @@ class ExploreViewController: UIViewController {
         let downImage = UIImage(systemName: "chevron.down")!
         let tipView = SwipeTipView(
             normalIcon: downImage,
-            activatedIcon: saveImage
+            activatedIcon: saveImage,
+            text: "Сохранить"
         )
-        tipView.text = "Сохранить"
         return tipView
     }()
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
-//        self.title = "Books"
         self.tabBarItem.image = UIImage(named: IconName.explore)
     }
 
@@ -70,24 +71,23 @@ class ExploreViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.addSubview(bookCoverView)
-        bookCoverView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bookView)
+        bookView.translatesAutoresizingMaskIntoConstraints = false
         
         // TODO: Fix this, tipWidth + 10
         let topPadding: CGFloat = 55
         
-        // С тестовой обложкой работает хорошо и без него, но мне кажется, что такое ограничение нужно,
-        // чтобы соблюдать равенство размеров карточек
-//        let heightConstraint = bookCoverView.heightAnchor.constraint(equalTo: bookCoverView.widthAnchor, multiplier: 1.5)
-//        heightConstraint.priority = .
-        let maxHeightConstraint = bookCoverView.heightAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.75)
-        maxHeightConstraint.priority = .defaultHigh
+        let heightConstraint = bookView.heightAnchor.constraint(equalTo: bookView.widthAnchor, multiplier: 1.5)
+        let maxHeightConstraint = bookView.heightAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.73)
+        heightConstraint.priority = .defaultLow
+        maxHeightConstraint.priority = .required
         
         NSLayoutConstraint.activate([
-            bookCoverView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bookCoverView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPadding),
-            bookCoverView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+            bookView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bookView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPadding),
+            bookView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
             maxHeightConstraint,
+            heightConstraint,
         ])
         
     }

@@ -11,6 +11,7 @@ struct ColorName {
     static let accent = "AccentColor"
     static let background = "Background"
     static let tip = "TipColor"
+    static let cardBack = "CardBack"
 }
 
 struct IconName {
@@ -19,4 +20,6 @@ struct IconName {
     static let explore = "Explore"
     static let friends = "Friends"
     static let bookmark = "Bookmark"
+    static let messenger = "Telegram"
+    static let bookStore = "LiveLib"
 }
